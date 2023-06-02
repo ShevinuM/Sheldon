@@ -25,28 +25,28 @@ class NeuralNet(nn.Module):
         self.relu = nn.ReLU()
         # relu: Rectified Linear Unit activation function
     
-def forward(self, x):
-    # Forward pass computation through the neural network
-    
-    out = self.l1(x)
-    # Compute the first linear transformation from input to hidden layer
-    # x: Input to the network
-    # l1: First linear layer
-    
-    out = self.relu(out)
-    # Apply the ReLU activation function to introduce non-linearity
-    # relu: Rectified Linear Unit activation function
-    
-    out = self.l2(out)
-    # Compute the second linear transformation from hidden layer to hidden layer
-    # l2: Second linear layer
-    
-    out = self.relu(out)
-    # Apply the ReLU activation function again
-    
-    out = self.l3(out)
-    # Compute the final linear transformation from hidden layer to output layer
-    # l3: Third linear layer
-    
-    return out
-    # Return the final output of the network
+    def forward(self, x):
+        # Forward pass computation through the neural network
+        
+        out = self.l1(x)
+        # Compute the first linear transformation from input to hidden layer
+        # x: Input to the network
+        # l1: First linear layer
+        
+        out = self.relu(out)
+        # Apply the ReLU activation function to introduce non-linearity
+        # relu: Rectified Linear Unit activation function
+        
+        out = self.l2(out)
+        # Compute the second linear transformation from hidden layer to hidden layer
+        # l2: Second linear layer
+        
+        out = self.relu(out)
+        # Apply the ReLU activation function again
+        
+        out = self.l3(out)
+        # Compute the final linear transformation from hidden layer to output layer
+        # l3: Third linear layer
+        
+        return out
+        # Return the final output of the network

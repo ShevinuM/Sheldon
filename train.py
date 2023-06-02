@@ -51,19 +51,17 @@ class ChatDataset(Dataset):
     def __len__(self):
         return self.n_samples
 
-
+num_epochs = 1000
 hidden_size = 8
 output_size = len(tags)
 input_size = len(x_train[0])
 learning_rate = 0.001
 
 dataset = ChatDataset()
-train_loader = DataLoader(dataset=dataset, batch_size=8, shuffle=True, num_workers=2)
+train_loader = DataLoader(dataset=dataset, batch_size=8, shuffle=True, num_workers=0)
 
 if torch.cuda.is_available():
     device = torch.device('cuda')
-elif torch.metal.is_available():
-    device = torch.device('metal')
 else:
     device = torch.device('cpu')
 
@@ -83,18 +81,23 @@ optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 # It adjusts the learning rate individually for each parameter for faster convergence and better optimization.
 
 for epoch in range(num_epochs):
+    # Iterate over the data in the train_loader
     for (words, labels) in train_loader:
+        # Move the input data and labels to the specified device
         words = words.to(device)
         labels = labels.to(device)
 
+        # Forward pass: compute predicted outputs
         outputs = model(words)
+
+        # Compute the loss between predicted outputs and true labels
         loss = criterion(outputs, labels)
 
+        # Backward pass: compute gradients and update model parameters
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
     
+    # Print the loss every 100 epochs
     if (epoch+1) % 100 == 0:
-        print(f'epoch{epoch+1}/{num_epochs}, loss={loss.item():.4f}')
-
-print(f'epoch {epoch+1} / {num_epochs}, loss={loss.item():.4f}')
+        print(f'Epoch {epoch+1}/{num_epochs}, Loss: {loss.item():.4f}')
