@@ -3,6 +3,7 @@ import torch.nn as nn
 
 class NeuralNet(nn.Module):
     def __init__(self, input_size, hidden_size, num_classes):
+        super(NeuralNet, self).__init__()
         # Initialize the class with input size, hidden size, and number of classes
         # input_size: Size of the input features
         # hidden_size: Number of neurons in the hidden layers
