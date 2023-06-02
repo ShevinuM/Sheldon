@@ -1,7 +1,6 @@
 import nltk
-
+nltk.download('punkt')
 from nltk.stem.porter import PorterStemmer
-
 
 stemmer = PorterStemmer()
 
@@ -13,5 +12,3 @@ def stem(word):
 
 def bag_of_words(tokenized_entry, all_words):
     pass
-
-

@@ -1,0 +1,70 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey! Welcome to the Portfolio Builder. How can I assist you?",
+        "Hello! How can I help you with your portfolio?",
+        "Hi there! How can I assist you in building your portfolio?"
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "How can I build a portfolio?",
+        "What should I include in my portfolio?",
+        "Can you provide tips for portfolio creation?"
+      ],
+      "responses": [
+        "To build a portfolio, focus on showcasing your skills, projects, and achievements. Include a variety of relevant samples and highlight your best work.",
+        "A portfolio should include your resume, projects, skills, testimonials, and contact information. Make it visually appealing and easily navigable.",
+        "In your portfolio, emphasize your key projects, provide project details, and demonstrate your skills and expertise. Don't forget to add your contact information."
+      ]
+    },
+    {
+      "tag": "projects",
+      "patterns": [
+        "What kind of projects should I include?",
+        "How many projects should I showcase?",
+        "Can you suggest project ideas for a portfolio?"
+      ],
+      "responses": [
+        "Include a mix of your best projects that highlight different skills and technologies. Aim for around 5-7 diverse projects in your portfolio.",
+        "For your portfolio, choose projects that align with your target industry or showcase your strongest skills. Quality over quantity is important.",
+        "Consider including projects that demonstrate your problem-solving abilities, creativity, and collaboration skills. Tailor them to your desired audience."
+      ]
+    },
+    {
+      "tag": "skills",
+      "patterns": [
+        "What skills should I emphasize in my portfolio?",
+        "How do I showcase my skills?",
+        "Should I include a skills section?"
+      ],
+      "responses": [
+        "Highlight skills relevant to your target industry or field. Showcase them in project descriptions and consider having a dedicated skills section.",
+        "In your portfolio, demonstrate your skills through project descriptions and results achieved. Consider creating a visual representation of your skills.",
+        "Emphasize skills that align with your career goals. Clearly mention them in your project descriptions and demonstrate how you applied them effectively."
+      ]
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "Should I include contact information in my portfolio?",
+        "How can I provide my contact details?",
+        "Is it important to have a contact section?"
+      ],
+      "responses": [
+        "Yes, including contact information is crucial. Add your email address, phone number, and links to your professional social media profiles.",
+        "It's essential to provide contact information in your portfolio. Consider including a dedicated contact section with your email and social media links.",
+        "Having a contact section in your portfolio is important for potential employers or clients to reach out. Make it easy for them to find and contact you."
+      ]
+    }
+  ]
+}
