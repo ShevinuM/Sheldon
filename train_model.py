@@ -1,3 +1,8 @@
+# This code is adapted from the open-source repository "https://github.com/patrickloeber/pytorch-chatbot.git
+# Original authors: Patrick Loeber
+
+# Original source: https://github.com/patrickloeber/pytorch-chatbot/blob/master/model.py
+
 import torch
 import torch.nn as nn
 

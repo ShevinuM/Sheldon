@@ -1,3 +1,7 @@
+# This code is adapted from the open-source repository "https://github.com/patrickloeber/pytorch-chatbot/blob/master/nltk_utils.py"
+# Original authors: Patrick Loeber
+# Code Adapted From: https://github.com/patrickloeber/pytorch-chatbot/blob/master/nltk_utils.py
+
 import nltk
 import numpy as np
 nltk.download('punkt')

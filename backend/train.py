@@ -1,3 +1,7 @@
+# This code is adapted from the open-source repository "https://github.com/patrickloeber/pytorch-chatbot"
+# Original authors: Patrick Loeber
+# Code Adapted From: ["https://github.com/patrickloeber/pytorch-chatbot/blob/master/train.py"]
+
 import json
 from nltk_utils import tokenize, stem, bag_of_words
 import numpy as np
