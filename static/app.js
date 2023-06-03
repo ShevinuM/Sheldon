@@ -41,6 +41,7 @@ class Chatbox {
         })
         .then(response => response.json()) // extract the JSON data from a response object and parse it into a JavaScript object.
         .then(response => {
+            console.log(response);
             let reply = {name: "Sheldon", message: response.answer };
             this.messages.push(reply)
             this.updateChatText(chatbox)
@@ -58,10 +59,10 @@ class Chatbox {
             // slice() is used to make a shallow copy of the messages array to make sure that the original array is not modified
             // reverse() is used to reverse the order of the elements in the array so that the latest message is displayed at the bottom
             // forEach() is used to iterate over the reversed array and execute the callback function for each element
-            if (item.name == "Sam") {
-                html += '<div class="message__item visitor">' + item.message + '</div>'
+            if (item.name == "Sheldon") {
+                html += '<div class="message__item visitor">' + item.message.replace(/\n/g, '<br><br>') + '</div>'
             } else {
-                html += '<div class="message__item operator">' + item.message + '</div>'
+                html += '<div class="message__item operator">' + item.message.replace(/\n/g, '<br>') + '</div>'
             }
         });
         

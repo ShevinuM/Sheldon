@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 
 from chat import getResponse
 
-app = Flask(__name__, template_folder='../templates', static_url_path='/static')
+app = Flask(__name__, template_folder='templates', static_url_path='/static')
 
 @app.get("/")
 def index():
@@ -11,7 +11,7 @@ def index():
 @app.post("/predict")
 def predict():
     txt = request.get_json().get("message")
-    response = getresponse(txt)
+    response = getResponse(txt)
     return jsonify({"answer": response})
 
 if __name__ == "__main__":

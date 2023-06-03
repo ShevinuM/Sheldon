@@ -85,7 +85,42 @@ body {
     border: none;
     border-radius: 10px;
     margin: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add box shadow */
     background-color: rgba(176, 176, 228, 0.5);
     font-family: 'Chakra Petch', sans-serif;
+    
+    font-size: 1rem;
 }
+
+.chatbox__footer input::placeholder {
+    color: rgb(64, 63, 63);
+}
+
+.chatbox__messages {
+    padding: 10px;
+    grid-column: 2;
+}
+
+.message__item {
+    margin-bottom: 10px;
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Chakra Petch', sans-serif;
+    word-break: break-word;
+    line-height: 2;
+}
+
+.visitor {
+    background-color: #fff;
+    color: #000;
+    align-self: flex-start;
+}
+
+.operator {
+    background-color: rgba(0, 0, 128, 0.3);
+    color: #fff;
+    align-self: flex-end;
+}
+
+

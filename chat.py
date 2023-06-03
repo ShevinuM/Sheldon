@@ -2,7 +2,7 @@ import random
 import json
 import torch
 from train_model import NeuralNet
-from nltk_utils import bag_of_words, tokenize
+from backend.nltk_utils import bag_of_words, tokenize
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -26,7 +26,7 @@ model.eval()
 
 bot_name = "Sheldon"
 def getResponse(message):
-    sentence = tokenize(sentence)
+    sentence = tokenize(message)
     X = bag_of_words(sentence, all_words_arr)
     X = X.reshape(1, X.shape[0])
     X = torch.from_numpy(X).to(device)
