@@ -7,14 +7,14 @@
 body {
     background-color: #d3a9ef;
     display: grid;
-    grid-template-columns: 260px 1fr;
+    grid-template-columns: 350px 1fr;
     grid-template-rows: 12fr 1fr;
 }
 
 .chatbox__sidebar {
     height: 100%;
     position: fixed;
-    width: 260px;
+    width: 350px;
     background-color: rgba(0, 0, 128, 0.5);
     padding: 20px;
     display: flex;
@@ -22,7 +22,8 @@ body {
 }
 
 .chatbox__sidebar .heading {
-    font-size: 3.5rem;
+    color: #ffff00;
+    font-size: 5rem;
     font-weight: 100;
     text-align: center;
     font-family: 'Chakra Petch', sans-serif;
@@ -31,7 +32,8 @@ body {
 }
 
 .chatbox__sidebar .description {
-    font-size: 16px;
+    color: yellow;
+    font-size: 20px;
     font-weight: 400;
     font-family: 'Chakra Petch', sans-serif;
     text-align: center;
@@ -43,9 +45,9 @@ body {
     margin-top: 50px;
     text-align: center;
     line-height: 2;
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'Chakra Petch', sans-serif;
-    color: darkgray;
+    color: rgba(255, 255, 0, 0.5);
     font-style: italic;
 }
 
@@ -73,10 +75,9 @@ body {
     padding: 10px;
     position: fixed;
     bottom: 0;
-    width: calc(100% - 260px);
-    left: 260px;
-    
-
+    width: calc(100% - 350px);
+    left: 350px;
+    background-color: #d3a9ef;
 }
 
 .chatbox__footer input[type="text"] {
@@ -95,6 +96,10 @@ body {
     color: rgb(64, 63, 63);
 }
 
+.chatbox__footer input[type="text"]:focus {
+    outline: none;
+}
+
 .chatbox__messages {
     padding: 10px;
     grid-column: 2;
@@ -103,7 +108,7 @@ body {
 .message__item {
     margin-bottom: 10px;
     max-width: 80%;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
     font-size: 20px;
     font-family: 'Chakra Petch', sans-serif;
@@ -112,14 +117,14 @@ body {
 }
 
 .visitor {
-    background-color: #fff;
-    color: #000;
+    background-color: rgba(208, 106, 218, 0.3);
+    color: rgb(31, 99, 25);
     align-self: flex-start;
 }
 
 .operator {
     background-color: rgba(0, 0, 128, 0.3);
-    color: #fff;
+    color: yellow;
     align-self: flex-end;
 }
 
