@@ -108,6 +108,6 @@ data = {
     "tags": tags  # Save the list of tags used during training
 }
 
-FILE = "data.pth"
+FILE = "saved_data/data.pth"
 torch.save(data, FILE)
 
