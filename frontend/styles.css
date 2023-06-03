@@ -5,10 +5,54 @@
 }
 
 body {
-    font-weight: 400;
-    font-size: 100%;
-    background-color: darkgray;
+    background-color: #cfb0e3;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: 100vh;
 }
+
+.chatbox__sidebar {
+    height: 100%;
+    position: fixed;
+    width: 260px;
+    background-color: rgba(0, 0, 128, 0.5);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatbox__sidebar .heading {
+    font-size: 3.5rem;
+    font-weight: 100;
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.chatbox__sidebar .description {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Chakra Petch', sans-serif;
+    text-align: center;
+    padding-top: 20px;
+    line-height: 2;
+}
+
+.chatbox__sidebar .commands {
+    margin-top: 50px;
+    text-align: center;
+    line-height: 2;
+    font-size: 16px;
+    font-family: 'Chakra Petch', sans-serif;
+    color: darkgray;
+    font-style: italic;
+}
+
+.chatbox__sidebar .commands ul{
+    list-style-type: none;
+}
+
 
 .send__button {
     width: 40px;
@@ -19,4 +63,8 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.chatbox__footer {
+    
 }
