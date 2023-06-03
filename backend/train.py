@@ -110,3 +110,4 @@ data = {
 
 FILE = "data.pth"
 torch.save(data, FILE)
+
