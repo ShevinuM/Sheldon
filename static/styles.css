@@ -5,10 +5,10 @@
 }
 
 body {
-    background-color: #cfb0e3;
+    background-color: #d3a9ef;
     display: grid;
     grid-template-columns: 260px 1fr;
-    grid-template-rows: 100vh;
+    grid-template-rows: 12fr 1fr;
 }
 
 .chatbox__sidebar {
@@ -57,8 +57,9 @@ body {
 .send__button {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    background-color: green;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 128, 0.3);
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,5 +67,25 @@ body {
 }
 
 .chatbox__footer {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 260px);
+    left: 260px;
     
+
+}
+
+.chatbox__footer input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add box shadow */
+    background-color: rgba(176, 176, 228, 0.5);
+    font-family: 'Chakra Petch', sans-serif;
 }

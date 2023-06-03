@@ -2,11 +2,11 @@ from flask import Flask, render_template, request, jsonify
 
 from chat import getResponse
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../templates', static_url_path='/static')
 
 @app.get("/")
 def index():
-    return render_template("../frontend/index.html")
+    return render_template("index.html")
 
 @app.post("/predict")
 def predict():
