@@ -3,3 +3,6 @@
 
 # Skills
 - Frameworks - NLTK, PyTorch
+
+# Constrains
+- Creating a large dataset requires time and the timespan of 48 hours is not adequate for the most comprehensive dataset.
