@@ -97,4 +97,16 @@ for epoch in range(num_epochs):
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-    
+
+# Create a dictionary to store model-related data
+data = {
+    "model_state": model.state_dict(),  # Save the state dictionary of the trained model
+    "input_size": input_size,  # Save the input size used during training
+    "output_size": output_size,  # Save the output size used during training
+    "hidden_size": hidden_size,  # Save the hidden size used during training
+    "all_words": all_words_arr,  # Save the list of all words used during training
+    "tags": tags  # Save the list of tags used during training
+}
+
+FILE = "data.pth"
+torch.save(data, FILE)
