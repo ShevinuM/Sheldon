@@ -7,7 +7,7 @@ Sheldon, the AI-powered chatbot, is here to help you craft an exceptional portfo
 
 # How I Built It
 
-The Sheldon chatbot project involved the integration of various technologies and a meticulous development process. Here's an overview of how the project was built:
+This project was built as a part of a 2 day hackathon.Sheldon project involved the integration of various technologies and a meticulous development process. Here's an overview of how the project was built:
 
 ### Dataset Creation
 - During the hackathon, I curated a dataset specifically tailored for portfolio building prompts. This dataset served as the foundation for training the chatbot's responses.
@@ -25,13 +25,10 @@ The Sheldon chatbot project involved the integration of various technologies and
 - The frontend user interface was built using JavaScript, HTML, and CSS. These web technologies were used to create an interactive and visually appealing UI for users to engage with the chatbot. The interface enabled smooth communication between the user and the backend Flask server.
 
 ### API Key Management
-- To securely utilize the OpenAI API, I implemented a mechanism for storing the API key. Users were instructed to obtain an API key from the OpenAI website and place it in a file called `hidden.txt`. This ensured that the API key remained confidential while being easily accessible for the application.
+- To securely utilize the OpenAI API, I implemented a mechanism for storing the API key. Users were instructed to obtain an API key from the OpenAI website and place it in a file called `hidden.txt`. This ensured that the API key remained confidential while being easily accessible for the application. (Please note that I'm aware storing a key as .txt file is not the most secure, this is a temporary fix and I'll update it as soon as I can)
 
 ### Deployment and Testing
-- During development, I thoroughly tested the application locally to ensure its functionality and address any issues or bugs. Once satisfied with the results, I deployed the application to a hosting platform to make it accessible to users.
-
-Throughout the development process, I followed best practices, such as version control using Git, and regularly documented my progress. I made sure to adhere to licensing requirements, respect open-source contributions, and maintain clear communication with any external libraries or APIs used.
-
+- During development, I thoroughly tested the application locally to ensure its functionality and address any issues or bugs.
 
 
 ## Installation
