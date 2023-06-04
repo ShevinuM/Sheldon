@@ -56,3 +56,5 @@ This project was built as a part of a 2 day hackathon and I will expand upon it 
 -   Will utilize OpenAI's API to generate / edit project descriptions to make it more appealing.
 ### Refinement to UI
 -   UI will recieve minor refinements.
+### Changes to Project Structure
+-   The project structure right is not the most organized since I had to move files to fix bugs but it will be reorganized.
