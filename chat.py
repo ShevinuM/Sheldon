@@ -6,6 +6,7 @@
 # [I have modified and added code to allow the use of OpenAI API to respond to user inputs in the case that the 
 # dataset is unable to answer]
 
+import openai
 import random
 import json
 import torch
@@ -16,6 +17,8 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 with open('train_data.json', 'r') as f:
     train_data = json.load(f)
+with open('hidden.txt') as file:
+    openai.api_key = file.read()
 
 FILE = "saved_data/data.pth"
 data = torch.load(FILE)
@@ -50,15 +53,17 @@ def getResponse(message):
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
 
-    if prob.item() > 0.75:
+    if prob.item() > 0.75 or message.startswith("yes"):
         for intent in train_data["intents"]:
             if tag == intent["tag"]:
-                if tag == "yes" and chat_history[-1][1] == unable_to_find_response:
-                    continue
+                print(message)
+                print(message.startswith("yes"))
+                if message.startswith("yes") and (len(chat_history) > 0 and unable_to_find_response in chat_history[-1][1]):
+                    response = generateOpenAIResponse(chat_history[-1][0])
                 else:
                     response = random.choice(intent['responses'])
-                    chat_history.append((message, response))
-                    return response
+                chat_history.append((message, response))
+                return response
     else:
         chat_history.append([message, unable_to_find_response])
         return unable_to_find_response
@@ -66,5 +71,17 @@ def getResponse(message):
 def retrieveChatHistory():
     global chat_history
     return chat_history
+
+
+def generateOpenAIResponse(message):
+    messages = [{"role": "system", "content": "You are an advisor who gives support to help people create personal portfolios and you are lifelong friend of Sheldon Cooper"}]
+    messages.append({"role":"user", "content":message})
+    response = openai.ChatCompletion.create(
+        model = "gpt-3.5-turbo",
+        messages = messages
+    )
+    text_reply = response["choices"][0]["message"]["content"]
+    print(text_reply)
+    return text_reply
 
 
