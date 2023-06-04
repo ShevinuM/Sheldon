@@ -194,6 +194,15 @@
       "responses": [
         "Indeed, including contact information is crucial. The crucial details for facilitating connections and opening doors! Here's a comprehensive list of contact information to include in your portfolio:\n\nFull Name: Clearly state your full name, ensuring it stands out prominently. This allows potential employers or clients to address you correctly and facilitates professional communication.\nEmail Address: Provide a professional email address that you regularly check. This enables interested parties to reach out to you directly, sharing opportunities or seeking further information.\nPhone Number: Include a phone number where you can be reached, ensuring it is up-to-date and active. This allows for direct communication and provides a convenient way for interested parties to connect with you.\nLinkedIn Profile: Share a link to your LinkedIn profile, which serves as a digital resume and professional networking platform. A well-maintained LinkedIn profile allows potential employers or clients to learn more about your experience, skills, and professional connections.\nGitHub Profile: If you have a GitHub account with relevant projects or code samples, include a link to your profile. This allows interested parties to explore your code, contributions, and open-source projects, showcasing your technical abilities.\nPersonal Website: If you have a personal website, include its URL. A well-designed and informative website serves as a central hub for showcasing your portfolio, projects, and additional information about your skills and experiences.\n\nRemember to ensure that the contact information you provide is accurate, professional, and up-to-date. Consider the preferences of your target audience and provide the contact details most commonly used in your industry or field. By including the appropriate contact information, you enable potential employers or clients to easily reach out to you for further discussions, inquiries, or collaboration opportunities."
       ]
+    },
+    {
+      "tag": "yes",
+      "patterns": [
+        "yes", "yeah", "yup", "okay", "sure", "go ahead"
+      ],
+      "responses": [
+        "yes"
+      ]
     }
   ]
 }

@@ -3,7 +3,7 @@
 # Code Adapted From: ["https://github.com/patrickloeber/pytorch-chatbot/blob/master/train.py"]
 
 import json
-from nltk_utils import tokenize, stem, bag_of_words
+from backend.nltk_utils import tokenize, stem, bag_of_words
 import numpy as np
 
 import torch 

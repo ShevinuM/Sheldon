@@ -1,9 +1,9 @@
-# This code contains snippers from the open-source repository "https://github.com/patrickloeber/pytorch-chatbot.git
+# This code contains snippets from the open-source repository "https://github.com/patrickloeber/pytorch-chatbot.git
 # Original authors: Patrick Loeber
 
 # Original source: https://github.com/patrickloeber/pytorch-chatbot/blob/master/chat.py
 
-# [I have also modified and added code to allow the use of OpenAI API to respond to user inputs in the case that the 
+# [I have modified and added code to allow the use of OpenAI API to respond to user inputs in the case that the 
 # dataset is unable to answer]
 
 import random
@@ -36,6 +36,7 @@ chat_history = []
 bot_name = "Sheldon"
 def getResponse(message):
     global chat_history
+    unable_to_find_response = "Ah, it appears that the inquiry you've posed falls outside the realm of portfolio building, or perhaps it is a subject that has eluded my vast knowledge. Fear not, for I have a brilliant solution at hand. I happen to be acquainted with an esteemed colleague who possesses expertise in this very matter. Shall I take it upon myself to consult with him and seek an answer to your intriguing question?"
 
     sentence = tokenize(message)
     X = bag_of_words(sentence, all_words_arr)
@@ -52,13 +53,18 @@ def getResponse(message):
     if prob.item() > 0.75:
         for intent in train_data["intents"]:
             if tag == intent["tag"]:
-                response = random.choice(intent['responses'])
-                chat_history.append((message, response))
-                return response
+                if tag == "yes" and chat_history[-1][1] == unable_to_find_response:
+                    continue
+                else:
+                    response = random.choice(intent['responses'])
+                    chat_history.append((message, response))
+                    return response
     else:
-        return "Ah, it appears that the inquiry you've posed falls outside the realm of portfolio building, or perhaps it is a subject that has eluded my vast knowledge. Fear not, for I have a brilliant solution at hand. I happen to be acquainted with an esteemed colleague who possesses expertise in this very matter. Shall I take it upon myself to consult with him and seek an answer to your intriguing question?"
-
+        chat_history.append([message, unable_to_find_response])
+        return unable_to_find_response
+    
 def retrieveChatHistory():
     global chat_history
     return chat_history
+
 
