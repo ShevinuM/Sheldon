@@ -53,20 +53,15 @@ def getResponse(message):
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
 
-    if prob.item() > 0.75 or message.startswith("yes"):
+    if prob.item() > 0.85 or message.startswith("yes"):
         for intent in train_data["intents"]:
             if tag == intent["tag"]:
-                print(message)
-                print(message.startswith("yes"))
-                if message.startswith("yes") and (len(chat_history) > 0 and unable_to_find_response in chat_history[-1][1]):
-                    response = generateOpenAIResponse(chat_history[-1][0])
-                else:
-                    response = random.choice(intent['responses'])
-                chat_history.append((message, response))
-                return response
+                response = random.choice(intent['responses'])
     else:
-        chat_history.append([message, unable_to_find_response])
-        return unable_to_find_response
+        response = generateOpenAIResponse(message)
+    
+    chat_history.append([message, response])
+    return response
     
 def retrieveChatHistory():
     global chat_history
@@ -74,7 +69,7 @@ def retrieveChatHistory():
 
 
 def generateOpenAIResponse(message):
-    messages = [{"role": "system", "content": "You are an advisor who gives support to help people create personal portfolios and you are lifelong friend of Sheldon Cooper"}]
+    messages = [{"role": "system", "content": "You are Sheldon Cooper and you should talk like him and your role is to give advice to students in building portfolios"}]
     messages.append({"role":"user", "content":message})
     response = openai.ChatCompletion.create(
         model = "gpt-3.5-turbo",
