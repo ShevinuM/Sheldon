@@ -32,6 +32,9 @@ class Chatbox {
         let msg = {name: "user", message: text}
         this.messages.push(msg)
 
+        // Show loading indicator
+        this.showLoadingIndicator(chatbox);
+
         fetch('http://127.0.0.1:5000/predict', {
             method: 'POST',
             body: JSON.stringify({message: text }), //convert the object to JSON
@@ -39,34 +42,49 @@ class Chatbox {
                 'Content-Type': 'application/json' // indicate the server that the data in the request body is formatted in json
             }
         })
-        .then(response => response.json()) // extract the JSON data from a response object and parse it into a JavaScript object.
+        .then(response => response.json())
         .then(response => {
-            console.log(response);
             let reply = {name: "Sheldon", message: response.answer };
             this.messages.push(reply)
             this.updateChatText(chatbox)
             textField.value = ''
-        }).catch((error) => {
+
+            // Hide loading indicator
+            this.hideLoadingIndicator(chatbox);
+        })
+        .catch((error) => {
             console.error('Error:', error);
             this.updateChatText(chatbox)
             textField.value = ''
+
+            // Hide loading indicator
+            this.hideLoadingIndicator(chatbox);
         });
+    }
+
+    showLoadingIndicator(chatbox) {
+        const chatMessage = chatbox.querySelector('.chatbox__messages');
+        chatMessage.innerHTML = '<div class="message__item loading">' + '...' + '</div>';   
+    }
+
+    hideLoadingIndicator(chatbox) {
+        const chatMessage = chatbox.querySelector('.chatbox__messages');
+        const loadingIndicator = chatMessage.querySelector('.loading');
+        if (loadingIndicator) {
+            loadingIndicator.remove();
+        }
     }
 
     updateChatText(chatbox) {
         let html = ''
         this.messages.slice().reverse().forEach(function(item, index) {
-            // slice() is used to make a shallow copy of the messages array to make sure that the original array is not modified
-            // reverse() is used to reverse the order of the elements in the array so that the latest message is displayed at the bottom
-            // forEach() is used to iterate over the reversed array and execute the callback function for each element
             if (item.name == "Sheldon") {
-                html += '<div class="message__item visitor">' + item.message.replace(/\n/g, '<br><br>') + '</div>'
+                html += '<div class="message__item visitor">' + item.message.replace(/\n\n/g, '<br><br><br>').replace(/\n/g, '<br><br>') + '</div>'
             } else {
-                html += '<div class="message__item operator">' + item.message.replace(/\n/g, '<br>') + '</div>'
+                html += '<div class="message__item operator">' + item.message.replace(/\n\n/g, '<br><br><br>').replace(/\n/g, '<br><br>') + '</div>'
             }
         });
         
-        // select the first 'chatbox_messages' element within the 'chatBox' element
         const chatMessage = chatbox.querySelector('.chatbox__messages');
         chatMessage.innerHTML = html;
     }

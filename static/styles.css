@@ -116,11 +116,12 @@ body {
     line-height: 2;
 }
 
-.visitor {
+.visitor, .loading {
     background-color: rgba(208, 106, 218, 0.3);
     color: rgb(31, 99, 25);
     align-self: flex-start;
 }
+
 
 .operator {
     background-color: rgba(0, 0, 128, 0.3);
