@@ -25,7 +25,7 @@ Please note that I haven't yet tested running this by cloning from the repositor
 
 # How I Built It
 
-This project was built as a part of a 2 day hackathon.Sheldon project involved the integration of various technologies and a meticulous development process. Here's an overview of how the project was built:
+This project was built as a part of a 2 day hackathon and I will expand upon it after the hackathon. Sheldon project involved the integration of various technologies and a meticulous development process. Here's an overview of how the project was built:
 
 ### Dataset Creation
 - During the hackathon, I curated a dataset specifically tailored for portfolio building prompts. This dataset served as the foundation for training the chatbot's responses.
@@ -48,9 +48,11 @@ This project was built as a part of a 2 day hackathon.Sheldon project involved t
 ### Deployment and Testing
 - During development, I thoroughly tested the application locally to ensure its functionality and address any issues or bugs.
 
-
-## Constrains
-- Time was a constraint which led to
-  1. Lack of time to host the application on AWS.
-  2. Couldn't implement the resume generator.
-  3. DataSet is not large enough since I had to write the dataset.
+## What's Next
+### Hosting
+-   Sheldon will be available for public use since I have plans host it on Amazon EC2.
+### Built-in Resume Generator
+-   Sheldon will get a resume generator which builds a latex / pdf resume from user's prompts.
+-   Will utilize OpenAI's API to generate / edit project descriptions to make it more appealing.
+### Refinement to UI
+-   UI will recieve minor refinements.
