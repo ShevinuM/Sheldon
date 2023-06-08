@@ -24,18 +24,18 @@ Follow the steps below to set up and run the project:
     python3 app.py
 Please note that I haven't yet tested running this by cloning from the repository. If you encounter any issues during the setup process or have further questions, please feel free to reach out at MShevinu#5358 on Discord or shevinu2002@gmail.com in email.
 
+## How to navigate the repository
+- The main application file, `app.py`, can be found in the root directory.
+- The `templates` folder within the root directory contains HTML files, including the main UI file.
+- The `static` folder contains static assets such as CSS and JavaScript files for the front-end.
+- The `backend` folder contains files related to the application's backend, which currently includes the chatbot implementation.
+
 # How I Built It
 
-This project was built as a part of a 2 day hackathon and I will expand upon it after the hackathon. Sheldon project involved the integration of various technologies and a meticulous development process. Here's an overview of how the project was built:
+This project was built as a part of a 2 day hackathon and I expanded upon it after the hackathon. Project involved the integration of various technologies and a comprehensive development process. Here's an overview of how the project was built:
 
-### Dataset Creation
-- During the hackathon, I curated a dataset specifically tailored for portfolio building prompts. This dataset served as the foundation for training the chatbot's responses.
-
-### Deep Learning Algorithm
-- To train the dataset and generate responses, I leveraged an existing deep learning algorithm sourced from an open-source repository. The algorithm was carefully chosen, ensuring it was appropriately licensed for personal use.
-
-### OpenAI Integration
-- The dataset covered a wide range of prompts; however, for prompts that required more context or weren't adequately handled, I made use of the OpenAI API. By integrating the API, I could seamlessly generate responses that aligned with the tone and style of the dataset.
+### ChatBot
+- An earlier version of the application used an existing open-source repository to train a custom dataset, however the large dependency size restricted me from hosting the application. Hence, the current version uses the OpenAI API to generate responses
 
 ### Backend Development with Flask
 - The core functionality of the application was implemented using the Flask web framework. Flask allowed me to handle HTTP requests, route them to the appropriate endpoints, and facilitate seamless communication between the frontend and backend.
@@ -51,11 +51,9 @@ This project was built as a part of a 2 day hackathon and I will expand upon it 
 
 ## What's Next
 ### Hosting
--   Sheldon will be available for public use since I have plans host it on Amazon EC2.
+-   Sheldon will be available for public use since I have plans host it.
+### Caching
+- Utilize caching to generate faster responses.
 ### Built-in Resume Generator
 -   Sheldon will get a resume generator which builds a latex / pdf resume from user's prompts.
 -   Will utilize OpenAI's API to generate / edit project descriptions to make it more appealing.
-### Refinement to UI
--   UI will recieve minor refinements.
-### Changes to Project Structure
--   The project structure right is not the most organized since I had to move files to fix bugs but it will be reorganized.
