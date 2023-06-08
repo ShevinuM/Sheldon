@@ -1,7 +1,7 @@
 # Sheldon
 Sheldon, the AI-powered chatbot, is here to help you craft an exceptional portfolio. From generating customized resumes to answering queries, Sheldon brings his unique personality to assist you in creating a stellar portfolio that stands out. Get expert guidance and witty insights from Sheldon for a remarkable portfolio-building experience!
 
-# Skills
+## Skills
 - Frameworks - Flask
 - Languages  - JavaScript, Python, HTML, CSS
 - Developer Tools - VS Code, pip
@@ -30,7 +30,7 @@ Please note that I haven't yet tested running this by cloning from the repositor
 - The `static` folder contains static assets such as CSS and JavaScript files for the front-end.
 - The `backend` folder contains files related to the application's backend, which currently includes the chatbot implementation.
 
-# How I Built It
+## How I Built It
 
 This project was built as a part of a 2 day hackathon and I expanded upon it after the hackathon. Project involved the integration of various technologies and a comprehensive development process. Here's an overview of how the project was built:
 
