@@ -35,7 +35,10 @@ Please note that I haven't yet tested running this by cloning from the repositor
 This project was built as a part of a 2 day hackathon and I expanded upon it after the hackathon. Project involved the integration of various technologies and a comprehensive development process. Here's an overview of how the project was built:
 
 ### ChatBot
-- An earlier version of the application used an existing open-source repository to train a custom dataset, however the large dependency size restricted me from hosting the application. Hence, the current version uses the OpenAI API to generate responses
+- An earlier version of the application used an existing open-source repository to train a custom dataset, however the large dependency size restricted me from hosting the application.
+- The next version used the Chatterbot library to solve the issue, however, the responses were inconsistent and inaccurate.
+- Hence, the current version uses the OpenAI API to generate responses.
+- Uses persistent caching using a dictionary stored in a JSON file to increase response speed and reduce API calls.
 
 ### Backend Development with Flask
 - The core functionality of the application was implemented using the Flask web framework. Flask allowed me to handle HTTP requests, route them to the appropriate endpoints, and facilitate seamless communication between the frontend and backend.
