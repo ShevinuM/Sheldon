@@ -79,9 +79,9 @@ class Chatbox {
         let html = ''
         this.messages.slice().reverse().forEach(function(item, index) {
             if (item.name == "Sheldon") {
-                html += '<div class="message__item visitor">' + item.message.replace(/\n\n/g, '<br><br><br>').replace(/\n/g, '<br><br>') + '</div>'
+                html += '<div class="message__item visitor">' + item.message.replace(/\n/g, '<br>') + '</div>'
             } else {
-                html += '<div class="message__item operator">' + item.message.replace(/\n\n/g, '<br><br><br>').replace(/\n/g, '<br><br>') + '</div>'
+                html += '<div class="message__item operator">' + item.message.replace(/\n/g, '<br>') + '</div>'
             }
         });
         
