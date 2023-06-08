@@ -2,8 +2,9 @@
 Sheldon, the AI-powered chatbot, is here to help you craft an exceptional portfolio. From generating customized resumes to answering queries, Sheldon brings his unique personality to assist you in creating a stellar portfolio that stands out. Get expert guidance and witty insights from Sheldon for a remarkable portfolio-building experience!
 
 # Skills
-- Frameworks - NLTK, PyTorch, Flask
-- Languages  - JavaScript, Python, HTML5, CSS3
+- Frameworks - Flask
+- Languages  - JavaScript, Python, HTML, CSS
+- Developer Tools - VS Code, pip
 
 ## Installation
 Follow the steps below to set up and run the project:
@@ -15,7 +16,7 @@ Follow the steps below to set up and run the project:
     python3 -m venv env
 4. Activate the virtual environment
     source env/bin/activate
-5. Install the required libraries
+5. Install the required dependencies
     pip3 install -r requirement.txt
 6. Obtain an API key from the OpenAI website
 7. Create a file called hidden.txt and place the API Key
