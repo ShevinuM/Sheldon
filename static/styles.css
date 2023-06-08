@@ -102,7 +102,7 @@ body {
 
 .chatbox__messages {
     padding: 10px;
-    grid-column: 2;
+    grid-column: 2 / span 3;
 }
 
 .message__item {

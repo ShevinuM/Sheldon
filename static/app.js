@@ -20,6 +20,11 @@ class Chatbox {
                 this.onSendButton(chatBox)
             }
         })
+
+        const introMessage = {name: "Sheldon", message: "Greetings, I am Sheldon Cooper, and I welcome your inquiries pertaining to the art of portfolio construction. I am at your disposal, prepared to offer my profound expertise. However, I must insist that you refrain from divulging any classified information. Now, feel free to pose your inquiries, and I shall assist you with utmost diligence." };
+        this.messages.push(introMessage);
+        this.updateChatText(chatBox);
+
     }
 
     onSendButton(chatbox) {
@@ -64,7 +69,8 @@ class Chatbox {
 
     showLoadingIndicator(chatbox) {
         const chatMessage = chatbox.querySelector('.chatbox__messages');
-        chatMessage.innerHTML = '<div class="message__item loading">' + '...' + '</div>';   
+        const loadingIndicator = '<div class="message__item loading">' + '...' + '</div>';
+        chatMessage.insertAdjacentHTML('afterbegin', loadingIndicator);
     }
 
     hideLoadingIndicator(chatbox) {
