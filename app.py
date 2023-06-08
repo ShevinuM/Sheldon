@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 
-from chat import getResponse
+from backend.chat import getResponse
 
 app = Flask(__name__, template_folder='templates', static_url_path='/static')
 
