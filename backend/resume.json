@@ -14,11 +14,16 @@
             "LinkedIn": "https://www.linkedin.com/in/johndoe",
             "GitHub": "https://github.com/johndoe",
 
-            "university": "University of California, Berkeley",
-            "degree": "Bachelor of Science",
-            "major": "Bachelor of Science in Computer Science",
-            "graduationDate": "May 2015",
-            "startedDate": "August 2011",
+            "education": [
+                {
+                    "school": "University of California, Berkeley",
+                    "degree": "Bachelor of Science",
+                    "major": "Bachelor of Science in Computer Science",
+                    "graduationDate": "May 2015",
+                    "startedDate": "August 2011",
+                    "gpa": "3.5"
+                }
+            ],
 
             "projects": [
                 {
@@ -60,7 +65,7 @@
                 }
             ],
 
-            "technicalSkills": [
+            "skills": [
                 {
                     "Languages": [
                         "Java",
