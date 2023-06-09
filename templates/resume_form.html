@@ -97,25 +97,37 @@
             <div id="experienceContainer">
                 <div id="experienceTemplate">
                     <label for="company">Company:</label>
-                    <input type="text" id="company" name="resume[0][experience][0][company]" required>
+                    <input type="text" id="company" name="resume[0][experience][0][company]">
                     
                     <label for="title">Title</label>
 
                     <label for="position">Position:</label>
-                    <input type="text" id="position" name="resume[0][experience][0][position]" required>
+                    <input type="text" id="position" name="resume[0][experience][0][position]">
 
                     <label for="startDate">Start Date:</label>
-                    <input type="date" id="startDate" name="resume[0][experience][0][startDate]" required>
+                    <input type="date" id="startDate" name="resume[0][experience][0][startDate]">
 
                     <label for="endDate">End Date:</label>
-                    <input type="date" id="endDate" name="resume[0][experience][0][endDate]" required>
+                    <input type="date" id="endDate" name="resume[0][experience][0][endDate]">
 
                     <label for="experienceDescription">Experience Description:</label>
-                    <textarea id="experienceDescription" name="resume[0][experience][0][description]" required></textarea>
+                    <textarea id="experienceDescription" name="resume[0][experience][0][description]"></textarea>
                 </div>
+            </div>
+
+            <!----------------------------------------------------------->
+
+            <h2>Skills</h2>
+            <label for="languages">Languages:</label>
+            <textarea id="languages" name="resume[0][skills][Languages]"></textarea>
+
+            <label for="developerTools">Developer Tools:</label>
+            <textarea id="developerTools" name="resume[0][skills][developerTools]"></textarea>
+
+            <label for="frameworks">Frameworks:</label>
+            <textarea id="frameworks" name="resume[0][skills][frameworks]"></textarea>
     
             <button type="submit">Submit</button>
         </form>
     </body>
-    </html>
-    </body>
+</html>

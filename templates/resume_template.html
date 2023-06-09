@@ -34,20 +34,22 @@
         </ul>
     </section>
 
-    <section class="experience">
-        <h2>Experience</h2>
-        <ul>
-            {% for experience in resume['experience'] %}
-                <li>
-                    <h3>{{ experience['company'] }}</h3>
-                    <p>{{ experience['title'] }}</p>
-                    <p>{{ experience['startDate'] }} - {{ experience['endDate'] }}</p>
-                    <p>{{ experience['location'] }}</p>
-                    <p>{{ experience['description'] }}</p>
-                </li>
-            {% endfor %}
-        </ul>
-    </section>
+    {% if resume['experience'] %}
+        <section class="experience">
+            <h2>Experience</h2>
+            <ul>
+                {% for experience in resume['experience'] %}
+                    <li>
+                        <h3>{{ experience['company'] }}</h3>
+                        <p>{{ experience['title'] }}</p>
+                        <p>{{ experience['startDate'] }} - {{ experience['endDate'] }}</p>
+                        <p>{{ experience['location'] }}</p>
+                        <p>{{ experience['description'] }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endif %}
 
     <section class="projects">
         <h2>Projects</h2>
