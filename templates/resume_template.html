@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Template</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>{{ resume['firstName'] }} {{ resume['lastName'] }}</h1>
+        <p>{{ resume['email'] }}</p>
+        <p>{{ resume['phone'] }}</p>
+        <!-- Additional contact information -->
+    </header>
+    <section class="education">
+        <h2>Education</h2>
+        <ul>
+            <li>{{ education['degree'] }}</li>
+            <!-- Additional education details -->
+        </ul>
+    </section>
+    <section class="experience">
+        <h2>Experience</h2>
+        <ul>
+            {% for experience in resume['experience'] %}
+                <li>
+                    <h3>{{ experience['company'] }}</h3>
+                    <p>{{ experience['title'] }}</p>
+                    <p>{{ experience['startDate'] }} - {{ experience['endDate'] }}</p>
+                    <p>{{ experience['location'] }}</p>
+                    <p>{{ experience['description'] }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>{{ skills['skill1'] }}</li>
+            <li>{{ skills['skill2'] }}</li>
+            <!-- Additional skills -->
+        </ul>
+    </section>
+</body>
+</html>

@@ -1,0 +1,87 @@
+{
+    "resume": [
+        {
+            "firstName": "John",
+            "lastName": "Doe",
+            "address": "1234 Main St",
+            "city": "Anytown",
+            "state": "CA",
+            "zip": "12345",
+            "country": "USA",
+
+            "phone": "555-555-5555",
+            "email": "johndoe@email.com",
+            "LinkedIn": "https://www.linkedin.com/in/johndoe",
+            "GitHub": "https://github.com/johndoe",
+
+            "university": "University of California, Berkeley",
+            "degree": "Bachelor of Science",
+            "major": "Bachelor of Science in Computer Science",
+            "graduationDate": "May 2015",
+            "startedDate": "August 2011",
+
+            "projects": [
+                {
+                    "name": "Project 1",
+                    "description": "This is a project I worked on.",
+                    "technologies": [
+                        "Java",
+                        "C++",
+                        "Python"
+                    ]
+                },
+                {
+                    "name": "Project 2",
+                    "description": "This is another project I worked on.",
+                    "technologies": [
+                        "Java",
+                        "C++",
+                        "Python"
+                    ]
+                }
+            ],
+
+            "experience": [
+                {
+                    "company": "Company 1",
+                    "title": "Software Engineer",
+                    "startDate": "May 2015",
+                    "endDate": "Present",
+                    "location": "San Francisco, CA",
+                    "description": "I worked on this project."
+                },
+                {
+                    "company": "Company 2",
+                    "title": "Software Engineer Intern",
+                    "startDate": "May 2014",
+                    "endDate": "August 2014",
+                    "location": "San Francisco, CA",
+                    "description": "I worked on this project."
+                }
+            ],
+
+            "technicalSkills": [
+                {
+                    "Languages": [
+                        "Java",
+                        "C++",
+                        "Python"
+                    ]
+                },
+                {
+                    "developerTools": [
+                        "Eclipse",
+                        "Git",
+                        "GitHub"
+                    ]
+                },
+                {
+                    "frameworks": [
+                        "Spring",
+                        "Hibernate"
+                    ]
+                }
+            ]
+        }
+    ]
+}
