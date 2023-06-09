@@ -65,9 +65,11 @@
         <h2>Skills</h2>
         <ul>
             <ul>
-                <li>Languages</li>
-                <li>Developer Tools</li>
-                <li>Frameworks</li>
+                {% for category in resume[0]['skills'] %}
+                    <li>
+                        {{ category|dictkeys }} - {% for skill in category|dictvalues %}{{ skill }}, {% endfor %}
+                    </li>
+                {% endfor %}
             </ul>
         </ul>
     </section>
