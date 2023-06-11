@@ -1,3 +1,9 @@
+class ShowResumeGenerator {
+    constructor() {
+        this.resumeForm = document.querySelector('form');
+    }
+}
+
 class Chatbox {
     constructor() {
         this.args = {
@@ -11,7 +17,7 @@ class Chatbox {
     display() {
         const {sendButton, chatBox} = this.args;
 
-        sendButton.addEventListener('click', ()=> this.onSendButton(chatBox))
+        sendButton.addEventListener('click', ()=> this.onSendButton(chatBox));
         
         // select the first <input> element within the 'chatBox' element
         const node = chatBox.querySelector('input');
@@ -19,7 +25,7 @@ class Chatbox {
             if (key == "Enter") {
                 this.onSendButton(chatBox)
             }
-        })
+        });
 
         const introMessage = {name: "Sheldon", message: "Greetings, I am Sheldon Cooper, and I welcome your inquiries pertaining to the art of portfolio construction. I am at your disposal, prepared to offer my profound expertise. However, I must insist that you refrain from divulging any classified information. Now, feel free to pose your inquiries, and I shall assist you with utmost diligence." };
         this.messages.push(introMessage);
@@ -98,3 +104,8 @@ class Chatbox {
 
 const chatbox = new Chatbox();
 chatbox.display();
+
+const generateResumeButton = document.querySelector('.generate_resume_button');
+generateResumeButton.addEventListener('click', () => {
+    const showResumeGenerator = new ShowResumeGenerator();
+});
