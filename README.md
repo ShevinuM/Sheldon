@@ -13,16 +13,16 @@ Follow the steps below to set up and run the project:
 2. Change to the project directory
     cd your-repository
 3. Create a virtual environment
-    python3 -m venv env
+    `python3 -m venv env`
 4. Activate the virtual environment
-    source env/bin/activate
+    `source env/bin/activate`
 5. Install the required dependencies
-    pip3 install -r requirement.txt
+    `pip3 install -r requirement.txt`
 6. Obtain an API key from the OpenAI website
 7. Create a file called hidden.env in the root directory of the project and type the following in the file
-    OPENAI_API_KEY=your-api-key
+    `OPENAI_API_KEY=your-api-key`
 8. Run the project. 
-    python3 app.py
+    `python3 app.py`
 Please note that I haven't yet tested running this by cloning from the repository. If you encounter any issues during the setup process or have further questions, please feel free to reach out at MShevinu#5358 on Discord or shevinu2002@gmail.com in email.
 
 ## How to navigate the repository
@@ -47,17 +47,11 @@ This project was built as a part of a 2 day hackathon and I expanded upon it aft
 ### Frontend User Interface
 - The frontend user interface was built using JavaScript, HTML, and CSS. These web technologies were used to create an interactive and visually appealing UI for users to engage with the chatbot. The interface enabled smooth communication between the user and the backend Flask server.
 
-### API Key Management
-- To securely utilize the OpenAI API, I implemented a mechanism for storing the API key. Users were instructed to obtain an API key from the OpenAI website and place it in a file called `hidden.txt`. This ensured that the API key remained confidential while being easily accessible for the application. (Please note that I'm aware storing a key as .txt file is not the most secure, this is a temporary fix and I'll update it as soon as I can)
-
 ### Deployment and Testing
 - During development, I thoroughly tested the application locally to ensure its functionality and address any issues or bugs.
 
 ## What's Next
 ### Hosting
 -   Sheldon will be available for public use since I have plans host it.
-### Caching
-- Utilize caching to generate faster responses.
 ### Built-in Resume Generator
--   Sheldon will get a resume generator which builds a latex / pdf resume from user's prompts.
--   Will utilize OpenAI's API to generate / edit project descriptions to make it more appealing.
+-   Sheldon will get a resume generator which builds a pdf resume from user's prompts.
