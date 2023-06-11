@@ -19,7 +19,8 @@ Follow the steps below to set up and run the project:
 5. Install the required dependencies
     pip3 install -r requirement.txt
 6. Obtain an API key from the OpenAI website
-7. Create a file called hidden.txt and place the API Key
+7. Create a file called hidden.env in the root directory of the project and type the following in the file
+    OPENAI_API_KEY=your-api-key
 8. Run the project. 
     python3 app.py
 Please note that I haven't yet tested running this by cloning from the repository. If you encounter any issues during the setup process or have further questions, please feel free to reach out at MShevinu#5358 on Discord or shevinu2002@gmail.com in email.
