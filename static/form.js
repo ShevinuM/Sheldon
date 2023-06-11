@@ -16,13 +16,14 @@ class Form{
         this.experienceTemplate = document.getElementById('experienceTemplate');
         this.addExperienceButton = document.getElementById('addExperienceButton');
 
-        this.addEducationButton.addEventListener('click', ()=> this.addEducation().bind(this));
-        this.addProjectButton.addEventListener('click', ()=> this.addProject().bind(this));
-        this.addExperienceButton.addEventListener('click', ()=> this.addExperience().bind(this));
+        this.addEducationButton.addEventListener('click', ()=> this.addEducation());
+        this.addProjectButton.addEventListener('click', ()=> this.addProject());
+        this.addExperienceButton.addEventListener('click', ()=> this.addExperience());
         this.submitButton.addEventListener('click', this.onSubmit.bind(this));
     }
 
     addProject() {
+        console.log("addProject");
         const clone = this.projectTemplate.content.cloneNode(true);
         this.projectsContainer.appendChild(clone);
     }
@@ -38,6 +39,7 @@ class Form{
     }
 
     onSubmit(event) {
+        console.log("onSubmit");
         event.preventDefault(); // prevent the default form submission behavior
 
         const formData = new FormData(this.form);
@@ -111,4 +113,5 @@ class Form{
     }
 }
 
+console.log("form.js");
 const form = new Form();
