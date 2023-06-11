@@ -9,9 +9,9 @@ Sheldon, the AI-powered chatbot, is here to help you craft an exceptional portfo
 ## Installation
 Follow the steps below to set up and run the project:
 1. Clone the Repository
-    git clone https://github.com/your-username/your-repository.git
+    `git clone https://github.com/ShevinuM/Sheldon`
 2. Change to the project directory
-    cd your-repository
+    `cd your-repository`
 3. Create a virtual environment
     `python3 -m venv env`
 4. Activate the virtual environment
