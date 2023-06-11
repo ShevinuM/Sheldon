@@ -99,10 +99,11 @@ body {
 .chatbox__footer input[type="text"]:focus {
     outline: none;
 }
-
+.display_pane {
+    grid-column: 2 /span 3;
+}
 .chatbox__messages {
     padding: 10px;
-    grid-column: 2 / span 3;
 }
 
 .message__item {
@@ -128,5 +129,9 @@ body {
     color: yellow;
     align-self: flex-end;
 }
+
+.resume_generator {
+    display: none;
+  }
 
 
