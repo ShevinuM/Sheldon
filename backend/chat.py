@@ -1,6 +1,8 @@
 import openai
 import json
 import string
+from dotenv import load_dotenv
+import os
 
 CACHE_FILE = "backend/cache.json"
 
@@ -11,8 +13,8 @@ try:
 except FileNotFoundError:
     cache = {}
 
-with open('hidden.txt') as file:
-    openai.api_key = file.read()
+load_dotenv('../hidden.env')
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def getResponse(message):
 
