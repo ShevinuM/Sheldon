@@ -11,7 +11,6 @@ Follow the steps below to set up and run the project:
 1. Clone the Repository
     `git clone https://github.com/ShevinuM/Sheldon`
 2. Change to the project directory
-    `cd your-repository`
 3. Create a virtual environment
     `python3 -m venv env`
 4. Activate the virtual environment
