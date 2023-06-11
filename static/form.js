@@ -1,3 +1,5 @@
+const openai = require('openai');
+
 class Form{
 
     constructor(){
@@ -41,7 +43,7 @@ class Form{
         event.preventDefault(); // prevent the default form submission behavior
 
         const formData = new FormData(this.form);
-        const jsonData = this.converyFormDataToJson(formData);
+        const jsonData = this.convertFormDataToJson(formData);
 
         const projects = jsonData.resume[0].projects;
         const experience = jsonData.resume[0].experience;
@@ -64,11 +66,45 @@ class Form{
         
     }
 
-    converyFormDataToJson(formData) {
+    convertFormDataToJson(formData) {
+        const json = {};
 
-        
+        for (const[key, value] of formData.entries()) {
+            const keys = key.split('[').map((k) => k.replace(']', ''));
+
+            let obj = json;
+            for (let i=0; i < keys.length; i++) {
+                if (!obj[keys[i]]) {
+                    obj[keys[i]] = {};
+                }
+                obj = obj[keys[i]];
+            }
+
+            obj[keys[keys.length - 1]] = value;
+        }
+
+        return json;
     }
 
+    generateOpenAIDescription(userDescription) {
+        const data = {userDescription};
+
+        fetch('/generate_openai_description', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+            const generatedDescription = data.openai_description;
+            return generatedDescription;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
 }
 
 const form = new Form();
