@@ -4,10 +4,14 @@ class ShowResumeGenerator {
             chatWindow: document.querySelector('.chat_window'),
             resumeGenerator: document.querySelector('.resume_generator'),
         };
-    const {chatWindow, resumeGenerator} = this.args;
-    resumeGenerator.style.display = 'block';
-    chatWindow.style.display = 'none';
+    };
+
+    display() {
+        const {chatWindow, resumeGenerator} = this.args;
+        resumeGenerator.style.display = 'block';
+        chatWindow.style.display = 'none';
     }
+
 }
 
 class Chatbox {

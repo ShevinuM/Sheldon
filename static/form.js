@@ -25,17 +25,17 @@ class Form{
     addProject() {
         console.log("onAddProject");
         console.log("addProject");
-        const clone = this.projectTemplate.content.cloneNode(true);
+        const clone = this.projectTemplate.cloneNode(true);
         this.projectsContainer.appendChild(clone);
     }
 
     addEducation() {
-        const clone = this.educationTemplate.content.cloneNode(true);
+        const clone = this.educationTemplate.cloneNode(true);
         this.educationContainer.appendChild(clone);
     }
 
     addExperience() {
-        const clone = this.experienceTemplate.content.cloneNode(true);
+        const clone = this.experienceTemplate.cloneNode(true);
         this.experienceContainer.appendChild(clone);
     }
 
