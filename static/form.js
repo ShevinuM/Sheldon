@@ -1,5 +1,3 @@
-const openai = require('openai');
-
 class Form{
 
     constructor(){
@@ -62,7 +60,13 @@ class Form{
         modifiedJsonData.resume[0].projects = updatedProjectDescription;
         modifiedJsonData.resume[0].experience = updatedExperienceDescription;
 
-        // TODO: Send the modifiedJsonData to the server
+        fetch('http://127.0.0.1:5000/generate_resume', {
+            method: 'POST',
+            body: modifiedJsonData,
+            headers: {
+                'Content-Type': 'application/json' // indicate the server that the data in the request body is formatted in json
+            }
+        })
         
     }
 

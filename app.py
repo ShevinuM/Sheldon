@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify, send_file
 
-from backend.chat import getResponse
+from backend.chat import *
 from backend.generate_resume import *
 from backend.generate_openai_description import *
 
