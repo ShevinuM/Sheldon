@@ -1,12 +1,12 @@
 class ShowResumeGenerator {
     constructor() {
         this.args = {
-            chatBox: document.querySelector('.chatbox'),
+            chatWindow: document.querySelector('.chat_window'),
             resumeGenerator: document.querySelector('.resume_generator'),
-        }
-        const {chatBox, resumeGenerator} = this.args;
-        chatBox.style.display = 'none';
-        resumeGenerator.style.display = 'block';
+        };
+    const {chatWindow, resumeGenerator} = this.args;
+    resumeGenerator.style.display = 'block';
+    chatWindow.style.display = 'none';
     }
 }
 

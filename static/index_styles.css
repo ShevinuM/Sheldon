@@ -132,6 +132,6 @@ body {
 
 .resume_generator {
     display: none;
-  }
-
+    grid-column: 2 /span 3;
+}
 
