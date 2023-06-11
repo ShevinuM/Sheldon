@@ -23,6 +23,7 @@ class Form{
     }
 
     addProject() {
+        console.log("onAddProject");
         console.log("addProject");
         const clone = this.projectTemplate.content.cloneNode(true);
         this.projectsContainer.appendChild(clone);
@@ -39,7 +40,7 @@ class Form{
     }
 
     onSubmit(event) {
-        console.log("onSubmit");
+        
         event.preventDefault(); // prevent the default form submission behavior
 
         const formData = new FormData(this.form);
@@ -113,5 +114,5 @@ class Form{
     }
 }
 
-console.log("form.js");
+
 const form = new Form();
