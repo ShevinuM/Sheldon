@@ -8,7 +8,8 @@ app = Flask(__name__, template_folder='templates', static_url_path='/static')
 
 @app.get("/")
 def index():
-    return render_template("index.html")
+    resume_form_content = render_template("resume_form.html")
+    return render_template("index.html", resume_form_content=resume_form_content)
 
 @app.post("/predict")
 def predict():

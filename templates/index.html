@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="resume_generator">
-                <object data="resume_form.html" type="text/html"></object>
+                {{ resume_form_content|safe }}
             </div>
         </div>
         <script src="../static/app.js"></script>
