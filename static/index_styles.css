@@ -99,6 +99,7 @@ body {
 .chatbox__footer input[type="text"]:focus {
     outline: none;
 }
+
 .display_pane {
     grid-column: 2 /span 3;
 }
@@ -108,7 +109,7 @@ body {
 
 .message__item {
     margin-bottom: 10px;
-    max-width: 80%;
+    max-width: 100%;
     padding: 20px;
     border-radius: 10px;
     font-size: 20px;
@@ -140,3 +141,24 @@ body {
     height: 100vh;
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 12fr 1fr;
+    }
+
+    .chatbox__sidebar {
+        display: none;
+    }
+
+    .chatbox__footer {
+        width: 100%;
+        grid-column: 1;
+        grid-row: 2;
+        left: 0;
+    }
+    .message__item {
+        max-width: 100%;
+    }
+
+}
