@@ -1,5 +1,8 @@
 ## Changelog
 
+### Version 2.4
+- App is now responsive on mobile devices.
+  
 ### Version 2.3
 - App is live and can be accessed publicly.
 
