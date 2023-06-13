@@ -38,8 +38,7 @@ This project was built as a part of a 2 day hackathon and I expanded upon it aft
 ### ChatBot
 - An earlier version of the application used an existing open-source repository to train a custom dataset, however the large dependency size restricted me from hosting the application.
 - The next version used the Chatterbot library to solve the issue, however, the responses were inconsistent and inaccurate.
-- Hence, the current version uses the OpenAI API to generate responses.
-- The ChatBot is tailored to sound like Sheldon Cooper, from Big Bang Theory and it provides responses to any query related to portfolio building
+- Hence, the current version uses the OpenAI API to generate responses related to portfolio building.
 - It uses persistent caching using a dictionary stored in a JSON file to increase response speed and reduce API calls.
 
 ### Backend Development with Flask
