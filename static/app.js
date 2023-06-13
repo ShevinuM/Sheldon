@@ -40,7 +40,7 @@ class Chatbox {
         // Show loading indicator
         this.showLoadingIndicator(chatbox);
 
-        fetch('http://127.0.0.1:5000/predict', {
+        fetch('http://sheldon.ap-south-1.elasticbeanstalk.com/predict', {
             method: 'POST',
             body: JSON.stringify({message: text }), //convert the object to JSON
             headers: {

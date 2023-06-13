@@ -1,18 +1,20 @@
 from flask import Flask, render_template, request, jsonify, send_file
-
+from flask_cors import CORS
 from backend.chat import getResponse
 
-app = Flask(__name__, template_folder='templates', static_url_path='/static')
+application = Flask(__name__, template_folder='templates', static_url_path='/static')
+CORS(application)
+application.debug = True
 
-@app.get("/")
+@application.route("/", methods=['GET'])
 def index():
     return render_template("index.html")
 
-@app.post("/predict")
+@application.route("/predict", methods=['POST'])
 def predict():
     txt = request.get_json().get("message")
     response = getResponse(txt)
     return jsonify({"answer": response})
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    application.run()
