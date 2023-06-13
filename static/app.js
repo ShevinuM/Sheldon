@@ -1,19 +1,3 @@
-class ShowResumeGenerator {
-    constructor() {
-        this.args = {
-            chatWindow: document.querySelector('.chat_window'),
-            resumeGenerator: document.querySelector('.resume_generator'),
-        };
-    };
-
-    display() {
-        const {chatWindow, resumeGenerator} = this.args;
-        resumeGenerator.style.display = 'block';
-        chatWindow.style.display = 'none';
-    }
-
-}
-
 class Chatbox {
     constructor() {
         this.args = {
@@ -114,9 +98,3 @@ class Chatbox {
 
 const chatbox = new Chatbox();
 chatbox.display();
-
-const generateResumeButton = document.querySelector('.generate_resume_button');
-generateResumeButton.addEventListener('click', () => {
-    const showResumeGenerator = new ShowResumeGenerator();
-    showResumeGenerator.display();
-});
