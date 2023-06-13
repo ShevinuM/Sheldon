@@ -20,9 +20,10 @@ Follow the steps below to set up and run the project:
 6. Obtain an API key from the OpenAI website
 7. Create a file called hidden.env in the root directory of the project and type the following in the file
     `OPENAI_API_KEY=your-api-key`
-8. Run the project. 
+8. This application is configured to fetch data from the public address. If you want to run this application locally, you will need to change the fetch URL in app.js. Replace line 43 in app.js `fetch('http://sheldon.ap-south-1.elasticbeanstalk.com/predict', { ` with `fetch('http://localhost:5000/predict', {`.
+9. Run the project. 
     `python3 app.py`
-Please note that I haven't yet tested running this by cloning from the repository. If you encounter any issues during the setup process or have further questions, please feel free to reach out at MShevinu#5358 on Discord or shevinu2002@gmail.com in email.
+If you encounter any issues during the setup process or have further questions, please feel free to reach out at MShevinu#5358 on Discord or shevinu2002@gmail.com in email.
 
 ## How to navigate the repository
 - The main application file, `application.py`, can be found in the root directory.
