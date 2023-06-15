@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #d3a9ef;
+    background-color: white;
     display: grid;
     grid-template-columns: 350px 1fr;
     grid-template-rows: 12fr 1fr;
@@ -15,27 +15,27 @@ body {
     height: 100%;
     position: fixed;
     width: 350px;
-    background-color: rgba(0, 0, 128, 0.5);
+    background-color: rgba(243, 243, 248, 0.5);
     padding: 20px;
     display: flex;
     flex-direction: column;
 }
 
 .chatbox__sidebar .heading {
-    color: #ffff00;
-    font-size: 5rem;
+    color: black;
+    font-size: 4rem;
     font-weight: 100;
     text-align: center;
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: "Roboto Mono" !important;
     padding-bottom: 50px;
     padding-top: 50px;
 }
 
 .chatbox__sidebar .description {
-    color: yellow;
+    color: black;
     font-size: 20px;
     font-weight: 400;
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: "Roboto Mono" !important;
     text-align: center;
     padding-top: 20px;
     line-height: 2;
@@ -46,8 +46,8 @@ body {
     text-align: center;
     line-height: 2;
     font-size: 20px;
-    font-family: 'Chakra Petch', sans-serif;
-    color: rgba(255, 255, 0, 0.5);
+    font-family: "Roboto Mono" !important;
+    color: rgba(77, 77, 76, 0.5);
     font-style: italic;
 }
 
@@ -60,7 +60,7 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    background-color: rgba(0, 0, 128, 0.3);
+    background-color: rgb(255, 255, 255);
     border: none;
     display: flex;
     justify-content: center;
@@ -77,7 +77,7 @@ body {
     bottom: 0;
     width: calc(100% - 350px);
     left: 350px;
-    background-color: #d3a9ef;
+    background-color: white;
 }
 
 .chatbox__footer input[type="text"] {
@@ -86,8 +86,8 @@ body {
     border: none;
     border-radius: 10px;
     margin: 5px;
-    background-color: rgba(176, 176, 228, 0.5);
-    font-family: 'Chakra Petch', sans-serif;
+    background-color: rgba(243, 243, 248, 0.5);
+    font-family: "Roboto Mono" !important;
     
     font-size: 1rem;
 }
@@ -113,21 +113,21 @@ body {
     padding: 20px;
     border-radius: 10px;
     font-size: 20px;
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: "Roboto Mono" !important;
     word-break: break-word;
     line-height: 2;
 }
 
 .visitor, .loading {
-    background-color: rgba(208, 106, 218, 0.3);
-    color: rgb(31, 99, 25);
+    background-color: black;
+    color: white;
     align-self: flex-start;
 }
 
 
 .operator {
-    background-color: rgba(0, 0, 128, 0.3);
-    color: yellow;
+    background-color: white;
+    color: black;
     align-self: flex-end;
 }
 
@@ -162,3 +162,5 @@ body {
     }
 
 }
+
+
