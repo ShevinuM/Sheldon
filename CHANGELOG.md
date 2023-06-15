@@ -1,5 +1,8 @@
 ## Changelog
 
+### Version 2.5
+- Changed the UI
+
 ### Version 2.4
 - App is now responsive on mobile devices.
   
