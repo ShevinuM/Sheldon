@@ -1,11 +1,6 @@
 # Sheldon
 Sheldon, the AI-powered chatbot, is here to help you craft an exceptional portfolio. Sheldon brings his unique personality to assist you in creating a stellar portfolio that stands out. Get expert guidance and witty insights from Sheldon for a remarkable portfolio-building experience!
 
-## Skills
-- Frameworks - Flask
-- Languages  - JavaScript, Python, HTML, CSS
-- Developer Tools - VS Code, pip, AWS Elastic Beanstalk
-
 ## Installation
 Follow the steps below to set up and run the project:
 1. Clone the Repository
