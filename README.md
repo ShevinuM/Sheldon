@@ -37,17 +37,17 @@ This project was built as a part of a 2 day hackathon and I expanded upon it aft
 
 ### ChatBot
 
-## Version 1
+#### Version 1
 - The first version of the application used an existing open-source machine learning and natural language processing algorithm to train a custom dataset.
 - The custom dataset was a 68 input JSON based dataset which I wrote to train the algorithm.
 - I extracted the probabilty of match for each input and used OpenAI API to fetch responses for inputs with a low probabiliy.
 - The implementation for this can be seen in the earliest commits to the repository.
 
-## Version 2
+#### Version 2
 - The large dependency size prevented me from hosting the application. So I needed an alternative and decided to use the Chatterbot library.
 - However, the responses were very inconsistent and innacurate and the library needed a much larger dataset to be accurate.
 
-## Version 3
+#### Version 3
 - The current version only uses the OpenAI API for responses because I wanted to host the application.
 - It uses a JSON based persistent caching mechanism to increase response speed and reduce API calls.
 
