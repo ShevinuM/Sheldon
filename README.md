@@ -36,10 +36,20 @@ If you encounter any issues during the setup process or have further questions, 
 This project was built as a part of a 2 day hackathon and I expanded upon it after the hackathon. The theme of the hackathon was to build a tool to assist students in building a portfolio and what other way to assist students than building a fancy portfolio generator. Project involved the integration of various technologies and a comprehensive development process. Here's an overview of how the project was built:
 
 ### ChatBot
-- An earlier version of the application used an existing open-source repository to train a custom dataset, however the large dependency size restricted me from hosting the application.
-- The next version used the Chatterbot library to solve the issue, however, the responses were inconsistent and inaccurate.
-- Hence, the current version uses the OpenAI API to generate responses related to portfolio building.
-- It uses persistent caching using a dictionary stored in a JSON file to increase response speed and reduce API calls.
+
+## Version 1
+- The first version of the application used an existing open-source machine learning and natural language processing algorithm to train a custom dataset.
+- The custom dataset was a 68 input JSON based dataset which I wrote to train the algorithm.
+- I extracted the probabilty of match for each input and used OpenAI API to fetch responses for inputs with a low probabiliy.
+- The implementation for this can be seen in the earliest commits to the repository.
+
+## Version 2
+- The large dependency size prevented me from hosting the application. So I needed an alternative and decided to use the Chatterbot library.
+- However, the responses were very inconsistent and innacurate and the library needed a much larger dataset to be accurate.
+
+## Version 3
+- The current version only uses the OpenAI API for responses because I wanted to host the application.
+- It uses a JSON based persistent caching mechanism to increase response speed and reduce API calls.
 
 ### Backend Development with Flask
 - The core functionality of the application was implemented using the Flask web framework. Flask allowed me to handle HTTP requests, route them to the appropriate endpoints, and facilitate seamless communication between the frontend and backend.
