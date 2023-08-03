@@ -1,6 +1,26 @@
 # Sheldon
 Sheldon is here to help you craft an exceptional portfolio. Sheldon brings his unique personality to assist you in creating a stellar portfolio that stands out. Get expert guidance and witty insights from Sheldon for a remarkable portfolio-building experience!
 
+## How and Why I Built It
+
+This project was built as a part of a 2 day hackathon and I expanded upon it after the hackathon. The theme of the hackathon was to build a tool to assist students in building a portfolio and what other way to assist students than building a fancy portfolio generator. Project involved the integration of various technologies and a comprehensive development process. Here's an overview of how the project was built:
+
+### ChatBot
+
+#### Version 1
+- The first version of the application used an existing open-source machine learning and natural language processing algorithm to train a custom dataset.
+- The custom dataset was a 68 input JSON based dataset which I wrote to train the algorithm.
+- I extracted the probabilty of match for each input and used OpenAI API to fetch responses for inputs with a low probabiliy.
+- The implementation for this can be seen in the earliest commits to the repository.
+
+#### Version 2
+- The large dependency size prevented me from hosting the application. So I needed an alternative and decided to use the Chatterbot library.
+- However, the responses were very inconsistent and innacurate and the library needed a much larger dataset to be accurate.
+
+#### Version 3
+- The current version only uses the OpenAI API for responses because I wanted to host the application.
+- It uses a JSON based persistent caching mechanism to increase response speed and reduce API calls.
+
 ## Installation
 Follow the steps below to set up and run the project:
 1. Clone the Repository
@@ -25,26 +45,6 @@ If you encounter any issues during the setup process or have further questions, 
 - The `templates` folder within the root directory contains HTML files, including the main UI file.
 - The `static` folder contains static assets such as CSS and JavaScript files for the front-end.
 - The `backend` folder contains files related to the application's backend, which currently includes the chatbot implementation.
-
-## How and Why I Built It
-
-This project was built as a part of a 2 day hackathon and I expanded upon it after the hackathon. The theme of the hackathon was to build a tool to assist students in building a portfolio and what other way to assist students than building a fancy portfolio generator. Project involved the integration of various technologies and a comprehensive development process. Here's an overview of how the project was built:
-
-### ChatBot
-
-#### Version 1
-- The first version of the application used an existing open-source machine learning and natural language processing algorithm to train a custom dataset.
-- The custom dataset was a 68 input JSON based dataset which I wrote to train the algorithm.
-- I extracted the probabilty of match for each input and used OpenAI API to fetch responses for inputs with a low probabiliy.
-- The implementation for this can be seen in the earliest commits to the repository.
-
-#### Version 2
-- The large dependency size prevented me from hosting the application. So I needed an alternative and decided to use the Chatterbot library.
-- However, the responses were very inconsistent and innacurate and the library needed a much larger dataset to be accurate.
-
-#### Version 3
-- The current version only uses the OpenAI API for responses because I wanted to host the application.
-- It uses a JSON based persistent caching mechanism to increase response speed and reduce API calls.
 
 ### Backend Development with Flask
 - The core functionality of the application was implemented using the Flask web framework. Flask allowed me to handle HTTP requests, route them to the appropriate endpoints, and facilitate seamless communication between the frontend and backend.
