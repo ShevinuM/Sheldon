@@ -1,5 +1,5 @@
 # Sheldon
-Sheldon, the AI-powered chatbot, is here to help you craft an exceptional portfolio. Sheldon brings his unique personality to assist you in creating a stellar portfolio that stands out. Get expert guidance and witty insights from Sheldon for a remarkable portfolio-building experience!
+Sheldon is here to help you craft an exceptional portfolio. Sheldon brings his unique personality to assist you in creating a stellar portfolio that stands out. Get expert guidance and witty insights from Sheldon for a remarkable portfolio-building experience!
 
 ## Installation
 Follow the steps below to set up and run the project:
