@@ -1,6 +1,9 @@
 # Sheldon
 Sheldon is here to help you craft an exceptional portfolio. Sheldon brings his unique personality to assist you in creating a stellar portfolio that stands out. Get expert guidance and witty insights from Sheldon for a remarkable portfolio-building experience!
 
+## Demo (Click to Play)
+[![YouTube Video Link](http://img.youtube.com/vi/7qI0Be5LZXY/0.jpg)](https://www.youtube.com/watch?v=7qI0Be5LZXY)
+
 ## How and Why I Built It
 
 This project was built as a part of a 2 day hackathon and I expanded upon it after the hackathon. The theme of the hackathon was to build a tool to assist students in building a portfolio and what other way to assist students than building a fancy portfolio generator. Project involved the integration of various technologies and a comprehensive development process. Here's an overview of how the project was built:
@@ -54,3 +57,4 @@ If you encounter any issues during the setup process or have further questions, 
 
 ### Hosting
 - I used AWS Elastic Beanstalk to host the application for public access. 
+- The link is not working right now because I have exceeded the free-tier limits for Amazon EC2 hence it's no longer deployed.
