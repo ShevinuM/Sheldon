@@ -11,7 +11,7 @@ This project was built as a part of a 2 day hackathon and I expanded upon it aft
 ### ChatBot
 
 #### Version 1
-- The first version of the application used an existing open-source machine learning and natural language processing algorithm to train a custom dataset.
+- The first version of the application used open-source machine learning and natural language processing algorithm to train a custom dataset.
 - The custom dataset was a 68 input JSON based dataset which I wrote to train the algorithm.
 - I extracted the probabilty of match for each input and used OpenAI API to fetch responses for inputs with a low probabiliy.
 - The implementation for this can be seen in the earliest commits to the repository.
