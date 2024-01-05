@@ -15,6 +15,9 @@ This project was built as a part of a 2 day hackathon and I expanded upon it aft
 - The custom dataset was a 68 input JSON based dataset which I wrote to train the algorithm.
 - I extracted the probabilty of match for each input and used OpenAI API to fetch responses for inputs with a low probabiliy.
 - The implementation for this can be seen in the earliest commits to the repository.
+- Here is a video demonstration of the first version.
+  
+    [![YouTube Video Link](http://img.youtube.com/vi/Q4H-RmBrc8c/0.jpg)](https://www.youtube.com/watch?v=Q4H-RmBrc8c)
 
 #### Version 2
 - The large dependency size prevented me from hosting the application. So I needed an alternative and decided to use the Chatterbot library.
